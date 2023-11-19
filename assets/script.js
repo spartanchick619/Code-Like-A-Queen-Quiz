@@ -269,5 +269,5 @@ function initScores() {
 // Stores the High score on local storage
 function storeHighscores() {
     localStorage.setItem("highscores", JSON.stringify(highscores));
-    };
-};
+}
+
