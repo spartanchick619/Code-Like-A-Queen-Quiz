@@ -1,5 +1,4 @@
 // Quiz Questions Array
-document.addEventListener("DOMContentLoaded", function() {
     var questions = [
         {
             question: "What method returns a strings value as all uppercase characters?",
@@ -269,4 +268,4 @@ function initScores() {
 // Stores the High score on local storage
 function storeHighscores() {
     localStorage.setItem("highscores", JSON.stringify(highscores));
-});
+};
