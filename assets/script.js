@@ -114,116 +114,116 @@ tryAgainBtn.addEventListener("click", startOver);
 
 // Start timer
 function startTimer() {
-timerEl.textContent = "Time: " + timeLeft;
-startQuiz();
-timeInterval = setInterval(function () {
-    timeSpent++
-    timerEl.textContent = "Time: " + (timeLeft - timeSpent);
-    if (timeSpent >= timeLeft) {
-        clearInterval(timeInterval);
-        youLose();
-    }
-}, 1000);
+    timerEl.textContent = "Time: " + timeLeft;
+    startQuiz();
+    timeInterval = setInterval(function () {
+        timeSpent++
+        timerEl.textContent = "Time: " + (timeLeft - timeSpent);
+        if (timeSpent >= timeLeft) {
+            clearInterval(timeInterval);
+            youLose();
+        }
+    }, 1000);
 };
 
 // Stops timer
 function stopTimer() {
-clearInterval(timeInterval);
+    clearInterval(timeInterval);
 };
 
 // Unchecks all or previous answers
 function deselectAnswers() {
-answerEl.forEach((answer) => (answer.checked = false));
+    answerEl.forEach((answer) => (answer.checked = false));
 };
 
 // Selects the answer
 function getSelected() {
-var answer;
-answerEl.forEach((answerEl) => {
-    if (answerEl.checked) answer = answerEl.id;
-});
-console.log(answer);
-return answer;
+    var answer;
+    answerEl.forEach((answerEl) => {
+        if (answerEl.checked) answer = answerEl.id;
+    });
+    console.log(answer);
+    return answer;
 };
 
 // Starts the quiz
 function startQuiz() {
-homeEl.classList.add("hide");
-quizEl.classList.remove("hide");
-deselectAnswers();
-var currentQuestionData = questions[currentQuestion];
-questionEl.textContent = currentQuestionData.question;
-aText.textContent = currentQuestionData.a;
-bText.textContent = currentQuestionData.b;
-cText.textContent = currentQuestionData.c;
-dText.textContent = currentQuestionData.d;
+    homeEl.classList.add("hide");
+    quizEl.classList.remove("hide");
+    deselectAnswers();
+    var currentQuestionData = questions[currentQuestion];
+    questionEl.textContent = currentQuestionData.question;
+    aText.textContent = currentQuestionData.a;
+    bText.textContent = currentQuestionData.b;
+    cText.textContent = currentQuestionData.c;
+    dText.textContent = currentQuestionData.d;
 };
 
 // Loads next question
 function nextQuestion() {
-currentQuestion++;
-if (questions[currentQuestion]) {
-    startQuiz();
-} else {
+    currentQuestion++;
+    if (questions[currentQuestion]) {
+        startQuiz();
+    } else {
     // Hide button, show final score, and stop timer
     isCorrect.classList.add('hide');
     quizEl.classList.add('hide');
     nextBtnEl.classList.add('hide');
     inputScore.classList.remove('hide');
     stopTimer();
-}
+    }
 
-if ((timeLeft - timeSpent) > 0)  {
-    score = (timeLeft - timeSpent);
-    userScoreEl.textContent = score;
+    if ((timeLeft - timeSpent) > 0)  {
+        score = (timeLeft - timeSpent);
+        userScoreEl.textContent = score;
 }   
 };
 
 // Button goes to the next question
 nextBtnEl.addEventListener("click", () => {
-var answer = getSelected();
-if (answer) {
-    if (answer === questions[currentQuestion].correct) {
-        isCorrect.textContent = "Correct";
-        nextQuestion();
-    } else {
-        isCorrect.textContent = "Incorrect";
-        timeLeft -= 10;
-        nextQuestion();
+    var answer = getSelected();
+    if (answer) {
+        if (answer === questions[currentQuestion].correct) {
+            isCorrect.textContent = "Correct";
+            nextQuestion();
+        } else {
+            isCorrect.textContent = "Incorrect";
+            timeLeft -= 10;
+            nextQuestion();
+        };
     };
-};
 });
 
 // Out of time page function
 function youLose() {
-quizEl.classList.add('hide');
-youLost.classList.remove('hide');
-isCorrect.classList.add('hide');
-timerEl.classList.add('hide');
+    quizEl.classList.add('hide');
+    youLost.classList.remove('hide');
+    isCorrect.classList.add('hide');
+    timerEl.classList.add('hide');
 };
 
 // Starts quiz over
 function startOver () {
-refreshPage();
+    refreshPage();
 };
 
 // Refreshes the page
 function refreshPage() {
-location.reload()
+    location.reload()
 };
 
 // Submits score with initials to local storage
 function submitScore() {
-var score = userScoreEl.textContent;
-var initials = initialsEl.value;
-var oldScores = localStorage.getItem("scores");
-oldScores = JSON.parse(oldScores) || [];
-oldScores.push(initials + "-" + score);
-highscores = oldScores;
-localStorage.setItem("scores", JSON.stringify(oldScores));
-highscoreEl.classList.remove('hide');
-inputScore.classList.add('hide');
-initScores();
+    var score = userScoreEl.textContent;
+    var initials = initialsEl.value;
+    var oldScores = localStorage.getItem("scores");
+    oldScores = JSON.parse(oldScores) || [];
+    oldScores.push(initials + "-" + score);
+    highscores = oldScores;
+    localStorage.setItem("scores", JSON.stringify(oldScores));
+    highscoreEl.classList.remove('hide');
+    inputScore.classList.add('hide');
+    initScores();
 };
 
 // Button to start over
@@ -234,9 +234,9 @@ submitScoreBtn.addEventListener("click", submitScore);
 
 // Clear saved scores
 function clearScores() {
-highscores = [];
-localStorage.setItem("scores", JSON.stringify(highscores));
-loadHighscores();
+    highscores = [];
+    localStorage.setItem("scores", JSON.stringify(highscores));
+    loadHighscores();
 };
 
 // Clear score button
@@ -244,31 +244,30 @@ clearScoreBtn.addEventListener("click", clearScores);
 
 // Load saved scores
 function loadHighscores() {
-scoresEl.innerHTML="";
-console.log(highscores);
-for (let i = 0; i < highscores.length; i++) {
-    var newScore = highscores[i];
-    console.log(newScore);
-    var li = document.createElement("li");
-    li.textContent = newScore;
-    li.setAttribute("data-index", i);
-    scoresEl.appendChild(li);
-}
-highscoreLink.classList.add('hide');
+    scoresEl.innerHTML="";
+    console.log(highscores);
+    for (let i = 0; i < highscores.length; i++) {
+        var newScore = highscores[i];
+        console.log(newScore);
+        var li = document.createElement("li");
+        li.textContent = newScore;
+        li.setAttribute("data-index", i);
+        scoresEl.appendChild(li);
+    }
+    highscoreLink.classList.add('hide');
 };
 
 // Checks if scores are not null
 function initScores() {
-var storedScores = JSON.parse(localStorage.getItem("scores"));
-if (storedScores !== null) {
-    highscores = storedScores;
-  }
-  loadHighscores();
+    var storedScores = JSON.parse(localStorage.getItem("scores"));
+    if (storedScores !== null) {
+        highscores = storedScores;
+    }
+    loadHighscores();
 };
 
 // Stores the High score on local storage
 function storeHighscores() {
-localStorage.setItem("highscores", JSON.stringify(highscores));
+    localStorage.setItem("highscores", JSON.stringify(highscores));
+    };
 };
-
-});
