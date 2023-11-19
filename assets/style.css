@@ -1,0 +1,109 @@
+html {
+    background-color: #ffdadf;
+    justify-content: center;
+} 
+
+.title {
+    color: #080808;
+    background-color: orange;
+    border: 10px double white;
+    padding: 50px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 600px;
+    height: 175px;  
+}
+
+h2 {
+    color: #080808;
+    background-color: white;
+    border: 10px double orange;
+    padding: 50px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 600px;
+    height: 175px;
+
+}
+
+.question {
+    color: black;
+    background-color: white;
+    border: 10px solid orangered;
+    padding: 20px; 
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: content-box;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    margin: 10px;
+    width: 300px;
+    height: 40px;
+}
+
+.answer {
+    color: black;
+    background-color: whitesmoke;
+    border: 10px solid orangered;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: bold;
+    font-size: x-large;
+    margin: 10px;
+    width: 300px;
+    height: 40px;
+}
+
+.buttonA {
+    color: gray;
+    background-color: whitesmoke;
+    border: 10px solid orangered;
+    padding: 20px;
+    display: flex; 
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.buttonB {
+    color: grey;
+    background-color: orangered;
+    border: 10px solid #fe97b0;
+    padding: 20px;
+    display: flex; 
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.timer {
+   color:#fd3765; 
+   font-family: 'Helvertica', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-between;
+}
