@@ -4,27 +4,74 @@
         <meta charset="UTF-8"/>
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <title>Code Like A Queen Quiz</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/style.css"/>
     </head>
 <body>
+    <!--header-->
     <header>
-        <div class="row">
-            <div class="col-sm-8 pageTitle">
-                <h1>Coding Quiz Challenge</h1>
+        <!--highscore button-->
+        <button id="highscore" class="highscore">HighScores</button>
+        <!--quiz timer-->
+        <h3 class="timer" id="timer"></h3>
+        </header>
+        <!--home page-->
+        <div class="container" id="home">
+            <h1>Javascript Quiz</h1>
+            <button id="start-btn" class="btn">Start</button>
+        </div>
+        <!--quiz-->
+        <div class="container hide" id="quiz">
+            <!--quiz question-->
+            <h2 id="question">Question..</h2>
+            <!--answers-->
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer"/>
+                    <label for="a" id="b_text">Answer</label>
+                                    
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer" />
+                    <label for="b" id="b_text">Answer...</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer" />
+                    <label for="c" id="c_text">Answer...</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer" />
+                    <label for="d" id="d_text">Answer...</label>
+                </li>
+            </ul>
+            <button class="btn" id="Next"></button>
             </div>
-            <div class="col-sm-4" id="scoreBox">
-                <h4>Time Remaining<span id="timeLeft"></span>/h4>
+            <!--correct or incorrect-->
+            <p class="hide" id="input-score"></p>
+                <div class="inpuit-score">
+                    <h1>Congratulations!</h1>
+                    <p class="score">Your final score: <span id="score"></span></p>
+                    <p class="score">Enter initials: <input type="text" placeholder="initials" id="initials"></p>
+                      <button class="score-btn" id="submit-score">Submit</button>
+                </div>
             </div>
         </div>
-    </header>
-
-    <div class="row" id="gameIntro">
-        <div class="col-sm-12">
-            <div class="cardHolder">
-                <h4>Hpw To Play</h4>
+        <!--out of time page--> 
+        <div class="hide"  id="you-lose">
+            <div class="lose-container">
+                <h1>Out of Time!</h1>
+                <button class="try-again-btn" id="try-again-btn">Try Again!</button>
+            </div>
+        </div> 
+        <!--high score page--> 
+        <div class="hide" id="highscore-page">
+            <div class="highscore-container">
+                <div class="highscore-header">
+                    <h1 class="jighscore-h1">Highscores!</h1>
+                </div>
             </div>
         </div>
-    </div>
+        <!--highscires in local storage-->
+        <!--bacj home button-->
+        <!--clear storage button-->
