@@ -2,7 +2,7 @@
 
 ## Description
 
-This application was built for coding students to to be able to familiarize themselves with tests that they will likely encounter as they are in the interview process for software developer jobs. It is a timed coding quiz with multiple choice questions. This application will run in the browser and features dynamically updated HTML and CSS powered by JavaScript code. The challenges I had was getting the colors right and having it format correctly.
+This application was built for coding students to to be able to familiarize themselves with tests that they will likely encounter as they are in the interview process for software developer jobs. It is a timed coding quiz with multiple choice questions. This application will run in the browser and features dynamically updated HTML and CSS powered by JavaScript code. The challenges I had were getting the colors right, having it format correctly and having the scores show up on the page. I enjoyed creating it. 
 
 ## How to Install and Use
 
@@ -30,5 +30,5 @@ THEN I can save my initials and my score
 
 ## Links
 
-Deployed:
-GitHub:
+Deployed: http://127.0.0.1:3000/index.html
+GitHub: https://github.com/spartanchick619/Code-Like-A-Queen-Quiz.git
