@@ -1,87 +1,80 @@
 <!DOCTYPE html>
 <html lang="eng">
-
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <title>Code Like A Queen Quiz</title>
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Code Like A Queen Quiz</title>
+  </head>
+  <body>
     <!--header-->
     <header>
-        <!--highscore button-->
-        <button id="highscore" class="highscore">HighScores</button>
-        <!--quiz timer-->
-        <h3 class="timer" id="timer"></h3>
-        </header>
-        <!--home page-->
-        <div class="container" id="home">
-            <h1>Javascript Quiz</h1>
-            <button id="start-btn" class="btn">Start</button>
-        </div>
-        <!--quiz-->
-        <div class="container hide" id="quiz">
-            <!--quiz question-->
-            <h2 id="question">Question...</h2>
-            <!--answers-->
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="a" class="answer"/>
-                    <label for="a" id="b_text">Answer</label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="b" class="answer" />
-                    <label for="b" id="b_text">Answer...</label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="c" class="answer" />
-                    <label for="c" id="c_text">Answer...</label>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="d" class="answer" />
-                    <label for="d" id="d_text">Answer...</label>
-                </li>
-            </ul>
-            <button class="btn" id="Next"></button>
-            </div>
-            <!--correct or incorrect-->
-            <p class="is-correct" id="correct-or-incorrect"></p>
-            <!--save score to highscore pg-->
-            <p class="hide" id="input-score"></p>
-                <div class="input-score">
-                    <h1>Congratulations!</h1>
-                    <p class="score">Your final score: <span id="score"></span></p>
-                    <p class="score">Enter initials: <input type="text" placeholder="initials" id="initials"></p>
-                    <button class="score-btn" id="submit-score">Submit</button>
-                </div>
-            </div>
-            <!--out of time page--> 
-            <div class="hide"  id="you-lose">
-                <div class="lose-container">
-                    <h1>Out of Time!</h1>
-                    <button class="try-again-btn" id="try-again-btn">Try Again!</button>
-                </div>
-            </div> 
-            <!--high score page--> 
-            <div class="hide" id="highscore-page">
-                <div class="highscore-container">
-                    <div class="highscore-header">
-                        <h1 class="highscore-h1">Highscores!</h1>
-                    </div>
-                </div>
-            </div>
-            <!--highscores in local storage-->
-            <ul class="hide" id class="scores"></ul>
-            <!--back home button-->
-            <button class="highscore-btn" id="go-back">Return to Quiz</button>
-            <!--clear storage button-->
-            <button class="highscore-btn" id class="clear-scores">Clear Scores</button>
-        </div>
+      <!--highscore button-->
+      <button id="highscore" class="btn highscore">High Scores</button>
+      <!--quiz timer-->
+      <h3 class="timer" id="timer"></h3>
+    </header>
+      <!--home page-->
+    <div class="container" id="home">
+      <h1>Javascript Quiz</h1>
+      <button id="start-btn" class="btn">Start</button>
     </div>
-
+    <!--quiz-->
+    <div class="container hide" id="quiz">
+      <!--quiz question-->
+      <h2 id="question">Question...</h2>
+      <!--answers-->
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="a" class="answer"/>
+          <label for="a" id="a_text">Answer...</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="b" class="answer" />
+          <label for="b" id="b_text">Answer...</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="c" class="answer" />
+          <label for="c" id="c_text">Answer...</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="d" class="answer" />
+          <label for="d" id="d_text">Answer...</label>
+        </li>
+      </ul>
+      <button class="btn" id="next-btn">Submit</button>
+    </div>
+    <!--correct or incorrect-->
+    <p class="is-correct" id="correct-or-incorrect"></p>
+    <!--save score to highscore pg-->
+    <div class="container hide" id="input-score">
+      <h1>Congratulations!</h1>
+      <p class="score">Your final score: <span id="score"></span></p>
+      <p class="score">Enter initials: <input type="text" placeholder="initials" id="initials"></p>
+      <button class="score-btn" id="submit-score">Submit</button>
+    </div>
+    <!--out of time page--> 
+    <div class="hide"  id="you-lose">
+      <div class="lose-container">
+        <h1>Out of Time!</h1>
+        <button class="try-again-btn" id="try-again-btn">Try Again!</button>
+      </div>
+    </div> 
+    <!--high score page--> 
+    <div class="hide" id="highscore-page">
+      <div class="highscore-container">
+        <div class="highscore-header">
+          <h1 class="highscore-h1">High Scores!</h1>
+        </div>
+        <!--highscores in local storage-->
+        <ul class="hide" id="scores"></ul>
+        <!--back home button-->
+        <button class="btn highscore-btn" id="go-back">Return to Quiz</button>
+        <!--clear storage button-->
+        <button class="btn highscore-btn" id="clear-scores">Clear Scores</button>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
