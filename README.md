@@ -32,3 +32,7 @@ THEN I can save my initials and my score
 
 Deployed: http://127.0.0.1:3000/index.html
 GitHub: https://github.com/spartanchick619/Code-Like-A-Queen-Quiz.git
+
+![Application screenshot](./screenshot1.png)
+![Application screenshot](./screenshot2.png)
+![Application screenshot](./screenshot3.png)
